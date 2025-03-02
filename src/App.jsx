@@ -21,12 +21,6 @@ export const App = () => {
   return (
     <main className="section container">
       <h1 className="title is-flex is-align-items-center">{message}</h1>
-
-      <h1 className="title is-flex is-align-items-center">
-        {message}
-        <button data-cy="ClearButton" type="button" className="delete ml-3" />
-      </h1>
-
       <table className="table">
         <tbody>
           {goods.map(good => (
@@ -36,11 +30,10 @@ export const App = () => {
                   data-cy="AddButton"
                   type="button"
                   className="button"
-                  onClick={() => setMessage(`${good} is selectde`)}
+                  onClick={() => setMessage(`${good} is selected`)}
                 >
                   +
                 </button>
-                ;
               </td>
 
               <td data-cy="GoodTitle" className="is-vcentered">
