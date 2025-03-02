@@ -16,15 +16,15 @@ export const goods = [
 ];
 
 export const App = () => {
-  const [message, setMessage] = useState('No goods selected');
+  const [message, setMessage] = useState('Please select a good from the list');
 
   return (
     <main className="section container">
-      <h1 className="title is-flex is-align-items-center">{message}</h1>
+      <h1 className="title is-flex is-align-items-center">Jam is selected</h1>
       <table className="table">
         <tbody>
           {goods.map(good => (
-            <tr key={good} data-cy="Good">
+            <tr key={good} data-cy="Good" className='has-background-success-light'>
               <td>
                 <button
                   data-cy="AddButton"
